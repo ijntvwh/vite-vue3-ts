@@ -1,7 +1,7 @@
 import routes from 'virtual:generated-pages'
 import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
-import './style.css'
+import './style.scss'
 
 const router = createRouter({
   history: createWebHistory(),

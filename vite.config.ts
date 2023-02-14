@@ -1,5 +1,7 @@
 /* eslint-disable */
 import vue from '@vitejs/plugin-vue'
+import Autoprefixer from 'autoprefixer'
+import Tailwindcss from 'tailwindcss'
 import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'
 import viteEslint from 'vite-plugin-eslint'
@@ -26,4 +28,9 @@ export default defineConfig({
       eslintrc: { enabled: false },
     }),
   ],
+  css: {
+    postcss: {
+      plugins: [Tailwindcss, Autoprefixer],
+    },
+  },
 })
