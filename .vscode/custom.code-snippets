@@ -1,0 +1,80 @@
+{
+	"export const": {
+		"prefix": "expc",
+		"scope": "javascript,typescript",
+		"body": [
+			"export const $1 = $2"
+		],
+		"description": "export const"
+	},
+	"export arrow function": {
+		"prefix": "expa",
+		"scope": "javascript,typescript",
+		"body": [
+			"export const $1 = ($2) => {$3}"
+		],
+		"description": "export arrow function"
+	},
+	"export function": {
+		"prefix": "expf",
+		"scope": "javascript,typescript",
+		"body": [
+			"export function $1($2){",
+			"\t$3",
+			"}"
+		],
+		"description": "export function"
+	},
+	"Vue Pages route": {
+		"scope": "vue",
+		"prefix": "route",
+		"body": [
+			"<route lang=\"yaml\">",
+			"name: ${1:routeName}",
+			"meta:",
+			"\t${2:k1}: ${3:v1}",
+			"</route>"
+		],
+		"description": "vue pages route by vite-plugin-pages"
+	},
+	"Print to console": {
+		"scope": "javascript,typescript",
+		"prefix": "log",
+		"body": [
+			"console.log('$1', $1$2)"
+		],
+		"description": "Log output to console"
+	},
+	"fori": {
+		"body": [
+			"for (let i = 0; i < $1; i++) {",
+			"\t$2",
+			"}"
+		],
+		"scope": "javascript,typescript",
+		"prefix": "fori",
+		"description": "for i"
+	},
+	"vue3 script width ts setup": {
+		"scope": "vue",
+		"prefix": "v3ts",
+		"body": [
+			"<script lang=\"ts\" setup>",
+			"$1",
+			"</script>"
+		],
+		"description": "vue3 script width ts setup"
+	},
+	"open tag": {
+		"scope": "html",
+		"prefix": "otag",
+		"body": "<$1>$2</$1>",
+		"description": "custom open tag"
+	},
+	"close tag": {
+		"scope": "html",
+		"prefix": "ctag",
+		"body": "<$1/>",
+		"description": "custom close tag"
+	}
+}

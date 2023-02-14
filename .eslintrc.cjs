@@ -10,9 +10,9 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
     'airbnb-base',
-    'prettier',
+    // 'prettier',
+    'plugin:prettier/recommended',
     '.eslintrc-auto-import.json',
-    // 'plugin:prettier/recommended',
   ],
   overrides: [],
   parser: 'vue-eslint-parser',
@@ -28,5 +28,26 @@ module.exports = {
     defineExpose: true,
     withDefaults: true,
   },
-  rules: {},
+  settings: {
+    'import/resolver': {
+      typescript: { project: './' },
+    },
+  },
+  rules: {
+    'no-console': 0,
+    'vue/multi-word-component-names': 0,
+    'import/prefer-default-export': 0,
+    'import/no-unresolved': [2, { ignore: ['^virtual:'] }],
+    'import/extensions': [
+      2,
+      'always',
+      {
+        js: 'never',
+        mjs: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+  },
 }

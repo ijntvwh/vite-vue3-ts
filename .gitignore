@@ -16,6 +16,7 @@ dist-ssr
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
+!.vscode/*.code-snippets
 .idea
 .DS_Store
 *.suo
@@ -25,4 +26,4 @@ dist-ssr
 *.sw?
 
 .stylelintcache
-types/autoImport.d.ts
+/types/autoImports.d.ts
