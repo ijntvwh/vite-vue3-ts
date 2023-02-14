@@ -14,7 +14,7 @@ module.exports = {
     'plugin:prettier/recommended',
     '.eslintrc-auto-import.json',
   ],
-  overrides: [],
+  overrides: [{ files: ['*.html'], processor: 'vue/.vue' }],
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
@@ -43,10 +43,9 @@ module.exports = {
       'always',
       {
         js: 'never',
-        mjs: 'never',
-        jsx: 'never',
         ts: 'never',
-        tsx: 'never',
+        // jsx: 'never',
+        // tsx: 'never',
       },
     ],
   },
