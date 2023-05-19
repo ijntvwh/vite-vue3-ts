@@ -1,7 +1,7 @@
 /* eslint-disable */
 import vue from '@vitejs/plugin-vue'
 import Autoprefixer from 'autoprefixer'
-import Tailwindcss from 'tailwindcss'
+import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'
 import viteEslint from 'vite-plugin-eslint'
@@ -12,11 +12,13 @@ import vueSetupExtend from 'vite-plugin-vue-setup-extend'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: { port: 3000 },
   resolve: {
     alias: { '@': '/src/' },
   },
   plugins: [
     vue(),
+    UnoCSS(),
     vueSetupExtend(),
     Pages(),
     viteEslint(),
@@ -30,7 +32,7 @@ export default defineConfig({
   ],
   css: {
     postcss: {
-      plugins: [Tailwindcss, Autoprefixer],
+      plugins: [Autoprefixer],
     },
   },
 })

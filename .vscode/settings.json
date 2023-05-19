@@ -6,7 +6,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true,
-    "source.organizeImports": true
+    // "source.organizeImports": true
   },
   "stylelint.validate": ["css", "scss", "vue"],
   "editor.formatOnSaveMode": "modificationsIfAvailable",
