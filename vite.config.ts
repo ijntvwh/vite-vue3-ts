@@ -9,6 +9,8 @@ import Inspect from 'vite-plugin-inspect'
 import Pages from 'vite-plugin-pages'
 import viteStylelint from 'vite-plugin-stylelint'
 import vueSetupExtend from 'vite-plugin-vue-setup-extend'
+import Components from 'unplugin-vue-components/vite'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -20,6 +22,7 @@ export default defineConfig({
     vue(),
     UnoCSS(),
     vueSetupExtend(),
+    Components({ resolvers: [AntDesignVueResolver()] }),
     Pages(),
     viteEslint(),
     viteStylelint({ fix: true }),
