@@ -6,29 +6,29 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true,
-    // "source.organizeImports": true
+    "source.organizeImports": true
   },
   "stylelint.validate": ["css", "scss", "vue"],
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "[vue]": {
     "editor.formatOnSave": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "Vue.volar"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "Vue.volar"
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "Vue.volar"
   },
   "[typescript]": {
     "editor.formatOnSave": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "Vue.volar"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
   "files.exclude": {
     "**/.classpath": true,
@@ -64,6 +64,7 @@
     "*.wxss": "css",
     "*.wxs": "javascript",
     ".env.*": "dotenv"
-  }
+  },
+  "iconify.cdnEntry": "https://fastly.jsdelivr.net/gh/iconify/icon-sets/json"
   // "scss.lint.unknownAtRules": "ignore"
 }

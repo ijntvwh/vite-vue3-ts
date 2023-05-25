@@ -1,14 +1,11 @@
 import App from '@/App.vue'
+import store from '@/store'
+import router from '@/router'
 import 'uno.css'
-import routes from 'virtual:generated-pages'
-import { createRouter, createWebHistory } from 'vue-router'
-import './style.scss'
+import '@unocss/reset/tailwind-compat.css'
+import '@/style.scss'
 
-const router = createRouter({
-  history: createWebHistory(),
-  routes,
-})
-console.log('routes', routes)
 const app = createApp(App)
 app.use(router)
+app.use(store)
 app.mount('#app')

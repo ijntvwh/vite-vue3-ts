@@ -27,3 +27,5 @@ dist-ssr
 
 .stylelintcache
 /types/autoImports.d.ts
+/types/typed-router.d.ts
+/types/components.d.ts
