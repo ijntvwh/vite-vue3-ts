@@ -8,12 +8,6 @@ import { ResBaseData } from 'axios'
 export const ACCESS_TOKEN_EXPIRED = '003001'
 export const ERROR_OVERWRITE: Record<string, string> = {
   // '003000': '不合法的Token',
-  '003000': '',
-  '102008': '',
-  '011003': '',
-  '011001': '',
-  '003001': 'Token过期',
-  '000501': '',
 }
 
 export const toastError = (err: Error | ResBaseData) => {

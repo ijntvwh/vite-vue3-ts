@@ -12,7 +12,7 @@ const router = createRouter({
     //   adminRoute.meta ??= {}
     //   adminRoute.meta.auth = true
     // }
-    routes.push({ path: '/', redirect: '/home' })
+    routes.push({ path: '/', redirect: HOME_PATH })
     return routes
   },
 })

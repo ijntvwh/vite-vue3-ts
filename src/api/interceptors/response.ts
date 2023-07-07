@@ -1,6 +1,6 @@
 import { Api, hasCustomKey } from '@/api'
 import { ACCESS_TOKEN_EXPIRED } from '@/api/interceptors/error'
-import { AuthRes, authStore } from '@/store/auth'
+import { AuthData, authStore } from '@/store/auth'
 import { ResBaseData } from 'axios'
 
 const lock = ref(false)
@@ -18,7 +18,7 @@ export const refreshTokenAsync = (res: ResBaseData): Promise<ResBaseData> => {
       })
     lock.value = true
     // todo refreshURL
-    return Api.post<AuthRes>('/open/c/auth/refreshToken', { refresh })
+    return Api.post<AuthData>('refreshURL', { refresh })
       .then(res => store.updateAuth(res))
       .finally(() => (lock.value = false))
       .then(() => Api(res.config))
@@ -27,4 +27,4 @@ export const refreshTokenAsync = (res: ResBaseData): Promise<ResBaseData> => {
 }
 
 export const extractResData = (res: ResBaseData): Promise<ResBaseData> =>
-  res.data?.code === '000000' ? (hasCustomKey(res.config, 'complete') ? res.data : res.data.data) : Promise.reject(res)
+  res.data?.success ? (hasCustomKey(res.config, 'complete') ? res.data : res.data.data) : Promise.reject(res)

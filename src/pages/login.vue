@@ -10,7 +10,7 @@ const route = useRoute()
 
 function loginAction() {
   const store = authStore()
-  store.updateAuth({ accessToken: 'accessToken', refreshToken: 'refreshToken' })
+  store.updateAuth({ access: 'access', refresh: 'refresh' })
   console.log('route', route.redirectedFrom)
   if (route.redirectedFrom) {
     router.replace(route.redirectedFrom)
