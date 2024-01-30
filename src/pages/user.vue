@@ -1,6 +1,6 @@
 <template>
   <div>user</div>
-  <a-button @click="logout"> 退出登录 </a-button>
+  <n-button @click="logout"> 退出登录 </n-button>
 </template>
 <script lang="ts" setup>
 import router from '@/router'

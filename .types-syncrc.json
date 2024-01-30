@@ -1,0 +1,6 @@
+{
+  "dependencies": [],
+  "ignore": ["eslint",  "eslint-plugin-prettier","lint-staged", "prettier", "rollup-plugin-visualizer"],
+  "packageManager": "pnpm",
+  "removeUnused": true
+}

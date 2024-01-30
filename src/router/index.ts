@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router/auto'
-import { authStore } from './store/auth'
+import { authStore } from '../store/auth'
 
 export const UNAUTHORIZED_PATH = '/login'
 export const HOME_PATH = '/home'

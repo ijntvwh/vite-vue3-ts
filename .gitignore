@@ -25,6 +25,8 @@ dist-ssr
 *.sln
 *.sw?
 
+stats.html
+.eslint-auto-import.json
 .stylelintcache
 /types/autoImports.d.ts
 /types/typed-router.d.ts

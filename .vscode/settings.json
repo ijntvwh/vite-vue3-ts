@@ -4,9 +4,9 @@
   "editor.formatOnSave": true,
   "editor.wordWrapColumn": 120,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true,
-    "source.organizeImports": true
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
+    "source.organizeImports": "explicit"
   },
   "stylelint.validate": ["css", "scss", "vue"],
   "editor.formatOnSaveMode": "modificationsIfAvailable",
@@ -15,20 +15,20 @@
     "editor.defaultFormatter": "Vue.volar"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "Vue.volar"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
     "editor.defaultFormatter": "Vue.volar"
   },
   "[typescript]": {
     "editor.formatOnSave": false,
-    "editor.defaultFormatter": "Vue.volar"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "files.exclude": {
     "**/.classpath": true,
@@ -44,7 +44,6 @@
   "eslint.run": "onSave",
   "eslint.format.enable": true,
   "eslint.lintTask.enable": true,
-  "eslint.packageManager": "pnpm",
   "npm.packageManager": "pnpm",
   "search.exclude": {
     "**/dist": true,
@@ -58,6 +57,12 @@
   "files.watcherExclude": {
     "/dist/": true,
     "/node_modules/": true,
+    "dist": true,
+    "types/auto-imports.d.ts": true,
+    "types/typed-router.d.ts": true,
+    "types/components.d.ts": true,
+    "pnpm-lock.yaml": true,
+    "stats.html": true
   },
   "files.associations": {
     "*.cjson": "jsonc",
@@ -65,6 +70,4 @@
     "*.wxs": "javascript",
     ".env.*": "dotenv"
   },
-  "iconify.cdnEntry": "https://fastly.jsdelivr.net/gh/iconify/icon-sets/json"
-  // "scss.lint.unknownAtRules": "ignore"
 }

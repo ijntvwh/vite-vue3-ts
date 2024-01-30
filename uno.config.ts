@@ -1,5 +1,11 @@
-import { defineConfig } from 'unocss'
+import { defineConfig, presetAttributify, presetMini } from 'unocss'
 
 export default defineConfig({
-  // ...UnoCSS options
+  presets: [presetAttributify(), presetMini()],
+  rules: [],
+  shortcuts: {
+    'flex-c': 'flex justify-center items-center',
+    'flex-ac': 'flex justify-around items-center',
+    'flex-bc': 'flex justify-between items-center',
+  },
 })

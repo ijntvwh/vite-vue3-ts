@@ -1,6 +1,6 @@
 <template>
   <div>login</div>
-  <a-button @click="loginAction"> 登录 </a-button>
+  <n-button @click="loginAction"> 登录 </n-button>
 </template>
 
 <script setup lang="ts">

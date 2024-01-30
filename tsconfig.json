@@ -14,10 +14,9 @@
     "skipLibCheck": true,
     "noEmit": true,
     "baseUrl": "./",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "paths": { "@/*": ["src/*"] },
+    "types": ["node", "vite/client", "vite-svg-loader"],
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "types/*.d.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
 }

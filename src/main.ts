@@ -1,9 +1,9 @@
 import App from '@/App.vue'
-import store from '@/store'
 import router from '@/router'
-import 'uno.css'
-import '@unocss/reset/tailwind-compat.css'
+import store from '@/store'
 import '@/style.scss'
+import '@unocss/reset/tailwind-compat.css'
+import 'virtual:uno.css'
 
 const app = createApp(App)
 app.use(router)
