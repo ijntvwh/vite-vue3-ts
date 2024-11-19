@@ -33,7 +33,8 @@
     "**/.factorypath": true,
     "**/.idea": true,
     "**/.project": true,
-    "**/.settings": true
+    "**/.settings": true,
+    "**/.git": true
   },
   "files.eol": "\n",
   "files.autoSave": "onFocusChange",
@@ -45,7 +46,9 @@
   "npm.packageManager": "pnpm",
   "search.exclude": {
     "**/dist": true,
-    "**/node_modules": true
+    "**/node_modules": true,
+    "**/yarn.lock": true,
+    "**/pnpm-lock.yaml": true
   },
   "cSpell.words": ["persistedstate", "pinia"],
   "files.watcherExclude": {
@@ -63,5 +66,14 @@
     "*.wxss": "css",
     "*.wxs": "javascript",
     ".env.*": "dotenv"
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "$(capture).test.ts, $(capture).test.tsx",
+    "*.tsx": "$(capture).test.ts, $(capture).test.tsx",
+    "*.env": "$(capture).env.*",
+    "package.json": "pnpm-lock.yaml,yarn.lock,README*,CHANGELOG*,CNAME,.eslint*,eslint*,.gitignore,.npmrc,.prettier*,commitlint.*,.types-sync*",
+    "vite.config.*": "index.html,uno.*,stats.html"
   }
 }
