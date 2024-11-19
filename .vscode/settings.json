@@ -5,10 +5,8 @@
   "editor.wordWrapColumn": 120,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.fixAll.stylelint": "explicit",
-    "source.organizeImports": "explicit"
+    "source.organizeImports": "never"
   },
-  "stylelint.validate": ["css", "scss", "vue"],
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "[vue]": {
     "editor.formatOnSave": false,
@@ -25,7 +23,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -49,11 +47,7 @@
     "**/dist": true,
     "**/node_modules": true
   },
-  "cSpell.words": [
-    "pinia",
-    "stylelint"
-  ],
-  "todo-tree.filtering.excludeGlobs": ["**/node_modules/**", "/workers/**"],
+  "cSpell.words": ["persistedstate", "pinia"],
   "files.watcherExclude": {
     "/dist/": true,
     "/node_modules/": true,
@@ -69,5 +63,5 @@
     "*.wxss": "css",
     "*.wxs": "javascript",
     ".env.*": "dotenv"
-  },
+  }
 }

@@ -1,24 +1,16 @@
-import { createRouter, createWebHashHistory } from 'vue-router/auto'
-import { authStore } from '../store/auth'
+import { authStore } from '@/store/auth'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import { handleHotUpdate, routes } from 'vue-router/auto-routes'
 
 export const UNAUTHORIZED_PATH = '/login'
 export const HOME_PATH = '/home'
 
 const router = createRouter({
   history: createWebHashHistory(),
-  extendRoutes: routes => {
-    // const adminRoute = routes.find(r => r.path === '/admin')
-    // if (adminRoute) {
-    //   adminRoute.meta ??= {}
-    //   adminRoute.meta.auth = true
-    // }
-    routes.push({ path: '/', redirect: HOME_PATH })
-    return routes
-  },
+  routes: [{ path: '/', redirect: HOME_PATH }, ...routes],
 })
 router.beforeEach((to, from, next) => {
   const authenticated = authStore().access
-  // console.log('route to from', to.path, from.path)
   if (to.meta.auth || to.matched.some(r => r.meta.auth)) {
     if (authenticated) return next()
     next(UNAUTHORIZED_PATH)
@@ -30,5 +22,6 @@ router.beforeEach((to, from, next) => {
 })
 
 export const toLogin = () => router.replace(UNAUTHORIZED_PATH)
+if (import.meta.hot) handleHotUpdate(router)
 
 export default router

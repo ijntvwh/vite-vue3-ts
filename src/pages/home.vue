@@ -1,6 +1,6 @@
 <template>
   <div>home</div>
-  <vue-icon />
+  <VueIcon />
   <n-button @click="navToUser"> 跳转用户页 </n-button>
 </template>
 

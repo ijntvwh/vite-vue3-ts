@@ -1,8 +1,8 @@
+import type { AxiosResponse, ReqConfig, ReqCustomKey, ResBaseData } from 'axios'
 import { navLogin, toastError } from '@/api/interceptors/error'
 import { fillEmptyBody, injectToken } from '@/api/interceptors/request'
 import { extractResData } from '@/api/interceptors/response'
-
-import axios, { AxiosResponse, ReqConfig, ReqCustomKey, ResBaseData } from 'axios'
+import axios from 'axios'
 
 const instance = axios.create({ baseURL: import.meta.env.VITE_API_HOST })
 const reqChain: ((_config: ReqConfig) => Promise<ReqConfig>)[] = [fillEmptyBody, injectToken]
@@ -23,6 +23,6 @@ instance.interceptors.response.use(
 
 export const Api = instance
 
-export const hasCustomKey = (config: ReqConfig | null, key: ReqCustomKey): boolean | undefined => {
+export function hasCustomKey(config: ReqConfig | null, key: ReqCustomKey): boolean | undefined {
   return config?.custom?.includes(key)
 }

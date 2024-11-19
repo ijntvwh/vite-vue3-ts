@@ -1,8 +1,10 @@
-import dayjs, { Dayjs } from 'dayjs'
+import type { Dayjs } from 'dayjs'
+import type { Plugin } from 'vite'
+import dayjs from 'dayjs'
 import duration from 'dayjs/plugin/duration'
 import { filesize } from 'filesize'
 import getFolderSize from 'get-folder-size'
-import type { Plugin } from 'vite'
+
 dayjs.extend(duration)
 
 export function viteBuildInfo(): Plugin {

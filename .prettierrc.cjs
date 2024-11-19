@@ -9,5 +9,5 @@ module.exports = {
   arrowParens: 'avoid',
   bracketSameLine: true,
   endOfLine: 'lf',
-  overrides: [{ "files": "*.html", "options": { "parser": "html" } }]
+  overrides: [{ files: '*.html', options: { parser: 'html' } }],
 }

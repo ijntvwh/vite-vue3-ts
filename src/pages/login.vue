@@ -6,6 +6,7 @@
 <script setup lang="ts">
 import router from '@/router'
 import { authStore } from '@/store/auth'
+
 const route = useRoute()
 
 function loginAction() {
