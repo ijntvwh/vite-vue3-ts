@@ -15,8 +15,9 @@ import svgLoader from 'vite-svg-loader'
 import { viteBuildInfo } from './build/buildInfo'
 import { pkgInfo } from './build/pkg'
 
-export default defineConfig(({ mode, command: _cmd }) => {
+export default defineConfig(({ mode, command }) => {
   const env = loadEnv(mode, process.cwd())
+  const isBuild = command === 'build'
   return {
     server: { port: 3000 },
     preview: { port: 4000 },
@@ -24,13 +25,17 @@ export default defineConfig(({ mode, command: _cmd }) => {
     define: { __APP_INFO__: pkgInfo },
     esbuild: {
       pure: ['console.log'],
-      drop: ['debugger'],
+      drop: ['debugger', 'console'],
       legalComments: 'none',
     },
     build: {
-      // sourcemap: true,
-      chunkSizeWarningLimit: 2048,
-      reportCompressedSize: false,
+      minify: isBuild ? 'terser' : 'esbuild',
+      sourcemap: false,
+      chunkSizeWarningLimit: 1024,
+      brotliSize: false,
+      terserOptions: {
+        compress: { drop_debugger: true, drop_console: true },
+      },
       rollupOptions: {
         output: {
           manualChunks: {
@@ -67,5 +72,12 @@ export default defineConfig(({ mode, command: _cmd }) => {
       }),
       viteBuildInfo(),
     ],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          silenceDeprecations: ['legacy-js-api'],
+        },
+      },
+    },
   }
 })
